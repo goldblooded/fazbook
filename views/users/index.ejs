@@ -8,12 +8,13 @@
     <h1>Welcome to fazbook</h1>
     <a href='/users/new'>Create a new fazbook</a>
     <% users.forEach(function(user) { %>
-      <div>
-      <span><%= user.firstName %></span>
-      <span><%= user.lastName %></span>
-      <span><%= user.email %></span>
-      <span><%= user.dob %></span>
-
+    <div>
+      <form action='/users/:id?_method=DELETE' method='POST'>
+        <span><%= user.firstName %></span>
+        <span><%= user.lastName %></span>
+        <span><%= user.email %></span>
+        <span><%= user.dob %></span>
+      </form>
      </div>
    <% }) %>
   </body>
